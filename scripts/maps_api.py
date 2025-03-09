@@ -1,7 +1,7 @@
 import requests
 a = [55.74802022425328, 48.7462753296416]  # Latitude, Longtitude (rightclick+copy from googlemaps)
-a=a[::-1]
-b = [a[0] + 0.03, a[1] + 0.02]
+a=a[::-1] #longtitude, latitude
+b = [a[0] + 0.03, a[1] + 0.02] #area of search
 
 body = {"request":"pois","geometry":{"bbox":[a,b],"geojson":{"type":"Point","coordinates":a},"buffer":200}}
 key='5b3ce3597851110001cf6248820c935b13e140fb9bff5b0bc86f678d'
@@ -28,3 +28,9 @@ for item in call['features']:
     
 print(info_nearby)
 # print(call.text)
+
+# git remote add upstream <original-repository-url>
+# git fetch upstream
+# git checkout main
+# git merge upstream/main
+# git push origin main
